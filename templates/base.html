@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cafetería</title>
+</head>
+<body>
+    <h1>Bienvenido a la Gestión de Cafetería</h1>
+    <ul>
+        <li><a href="{{ url_for('main.manage_campus') }}">Gestionar Campus</a></li>
+        <!-- Agregar enlaces a otras páginas de gestión -->
+    </ul>
+    {% block content %}{% endblock %}
+</body>
+</html>

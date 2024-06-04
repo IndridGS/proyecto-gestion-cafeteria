@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Gestionar Campus</h2>
+<form method="post">
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion" required>
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" name="estado" required>
+    <button type="submit">Agregar Campus</button>
+</form>
+
+<h3>Listado de Campus</h3>
+<ul>
+    {% for campus in campus_list %}
+    <li>{{ campus.descripcion }} - {{ campus.estado }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
